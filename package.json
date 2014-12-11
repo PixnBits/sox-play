@@ -1,6 +1,6 @@
 {
   "name": "sox-play",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "play sound files via sox's `play` command",
   "main": "index.js",
   "scripts": {
