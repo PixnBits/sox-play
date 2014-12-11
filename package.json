@@ -19,5 +19,13 @@
   "license": "GNE (use for Good Not Evil)",
   "dependencies": {
     "split": "~0.3.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PixnBits/sox-play.git"
+  },
+  "bugs": {
+    "url": "https://github.com/PixnBits/sox-play/issues"
   }
 }
