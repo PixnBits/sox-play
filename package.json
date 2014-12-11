@@ -1,0 +1,23 @@
+{
+  "name": "sox-play",
+  "version": "0.0.1",
+  "description": "play sound files via sox's `play` command",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sox",
+    "play",
+    "music",
+    "sound",
+    "speaker",
+    "audio",
+    "player"
+  ],
+  "author": "pixnbits",
+  "license": "GNE (use for Good Not Evil)",
+  "dependencies": {
+    "split": "~0.3.2"
+  }
+}
