@@ -25,10 +25,10 @@ util.inherits(AudioPlayer, EventEmitter);
 AudioPlayer.prototype.init = function(opts){
   opts = opts || {};
   this.file = opts.file || null;
+  this.args = opts.args || null;
   this.position = new PlayerPosition();
 };
 
-// TODO: start from position
 AudioPlayer.prototype.play = function(){
   if(this.ps){
     return this;
@@ -39,7 +39,17 @@ AudioPlayer.prototype.play = function(){
     this.emit('error', 'no file specified');
     return this;
   }
-  var ps = this.ps = spawn('play', [filePath]);
+  
+  var fileArgs   = this.args,
+    fileParams = [filePath];
+  
+  if(fileArgs){
+    fileArgs.forEach(function(key){
+      fileParams.push(key)
+    });
+  }
+  
+  var ps = this.ps = spawn('play', fileParams);
   var aPlayer = this;
 
   this.position.zero();
